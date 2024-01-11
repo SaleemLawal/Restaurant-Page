@@ -14,22 +14,23 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         clean: true,
+        publicPath: './',
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Food App',
             template: path.resolve(__dirname, './src/pages/template.html'),
-            filename: "index.html",
+            filename: "pages/index.html",
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pages/menu.html'),
-            filename: "menu.html",
+            filename: "pages/menu.html",
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pages/contact.html'),
-            filename: 'contact.html',
+            filename: 'pages/contact.html',
             inject: "body",
         })
     ],
@@ -42,6 +43,14 @@ module.exports = {
                     'css-loader'
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name].[hash][ext][query]',
+                },
+            },
+            
         ]
     },
     optimization: {
