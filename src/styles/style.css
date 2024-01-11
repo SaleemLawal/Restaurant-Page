@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+
 
 :root{
     --dark-blue: rgba(4,47,75,255);
@@ -9,6 +11,7 @@
     --hero-text-color: #ef2c58;
     --dark-cream: #fbc99d;
     --red-text-color-darker: #c0243f; 
+    --sansita: "Sansita Swashed", cursive;
 }
 *{
     box-sizing: border-box;
@@ -114,5 +117,13 @@ li{
     color: var(--red-text-color)
 }
 
-
-
+/* Menu Page Styling */
+/* #menu .hero h1::after {
+    content: "";
+    position: absolute;
+    top: 110%;
+    right: 10%;
+    width: 50%;
+    height: 2px;
+    background: var(--red-text-color);
+} */
