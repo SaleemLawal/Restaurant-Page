@@ -51,6 +51,7 @@ Make sure you have the latest version of a modern web browser installed, such as
    ```sh
    git clone https://github.com/SaleemLawal/Restaurant-Page.git
 2. Navigate to the project directory:
+    ``` sh
     cd Restaurant-Page
 3. Open index.html in your preferred browser.
 
