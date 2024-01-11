@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Salsa&display=swap');
+
+:root{
+    --dark-blue: rgba(4,47,75,255);
+    --red-text-color: #ee1350;
+    --salsa-font: 'Salsa', cursive;
+    --roboto-font: 'Roboto', sans-serif;
+    --cream: #ede7cf;
+    --hero-text-color: #ef2c58;
+    --dark-cream: #fbc99d;
+    --red-text-color-darker: #c0243f; 
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+header{
+    height: 8%;
+    color: var(--red-text-color);
+    font-family: var(--salsa-font);
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+}
+header h1{
+    font-size: 3rem;
+}
+
+ul li a{
+    color: var(--cream);
+    text-decoration: none;
+    padding: 1rem;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+main{
+    color: var(--dark-cream);
+    height: calc(100% - 8%);
+    background: url(./images/food.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.hero h1 {
+    font-size: calc(2rem + 2vw);
+    background: linear-gradient(to right, var(--hero-text-color) 0%, #fbc99d 100%);  
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero{
+    font-family: var(--salsa-font);
+    width: 50%;
+    text-align: center;
+}
+.hero p{
+    font-size: calc(0.5rem + 1vw);
+}
+.hero .order{
+    background-color: var(--red-text-color);
+    color: var(--cream);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.hero .order:hover{
+    background-color: var(--red-text-color-darker);
+    cursor: pointer;
+}
+main .business-info{
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 35%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.business-info svg{
+    color: var(--red-text-color);
+}
+.business-info i{
+    padding-right: 1rem;
+}
+.business-info p{
+    color: var(--cream);
+    font-size: calc(0.5rem + 0.75vw);
+}
+.business-info .address,
+.business-info .hours{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.hours p span{
+    color: var(--red-text-color)
+}
+
+
+
