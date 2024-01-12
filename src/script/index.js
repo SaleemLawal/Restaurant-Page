@@ -50,10 +50,10 @@ function loadHeader() {
 // loads the header for each html page
 document.body.insertBefore(loadHeader(), document.body.firstChild);
 
-if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '/Restaurant-Page/' || window.location.pathname === '/Restaurant-Page/index.html') {
     document.body.appendChild(loadHome());
-}else if (window.location.pathname === '/menu.html') {
+}else if (window.location.pathname === '/menu.html' || window.location.pathname === '/Restaurant-Page/menu.html') {
     document.body.appendChild(LoadMenu());
-}else if (window.location.pathname === '/contact.html') {
+}else if (window.location.pathname === '/contact.html' || window.location.pathname === '/Restaurant-Page/contact.html') {
     document.body.appendChild(loadContact());
 }
