@@ -54,7 +54,6 @@ if (window.location.pathname === '/' || window.location.pathname === '/index.htm
     document.body.appendChild(loadHome());
 }else if (window.location.pathname === '/menu.html') {
     document.body.appendChild(LoadMenu());
+}else if (window.location.pathname === '/contact.html') {
+    document.body.appendChild(loadContact());
 }
-// else if (window.location.pathname === '/contact.html') {
-//     document.body.appendChild(loadContact());
-// }
