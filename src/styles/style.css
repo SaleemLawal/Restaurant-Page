@@ -12,6 +12,7 @@
     --dark-cream: #fbc99d;
     --red-text-color-darker: #c0243f; 
     --sansita: "Sansita Swashed", cursive;
+    --food-menu-bg: #ffc7b0;
 }
 *{
     box-sizing: border-box;
@@ -24,7 +25,7 @@ body{
     height: 100vh;
 }
 header{
-    height: 8%;
+    min-height: 8%;
     color: var(--red-text-color);
     font-family: var(--salsa-font);
     background-color: var(--dark-blue);
@@ -118,12 +119,59 @@ li{
 }
 
 /* Menu Page Styling */
-/* #menu .hero h1::after {
-    content: "";
-    position: absolute;
-    top: 110%;
-    right: 10%;
+#menu{
+    height: max-content;
+    background-color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+#menu h1{
+    font-family: var(--sansita);
+    font-size: calc(1.5rem + 2vw);
+    color: var(--red-text-color);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#menu .menu-container{
+    width: 75%;
+    background-color: var(--food-menu-bg);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+#menu .item-content h4{
+    font-family: var(--salsa-font);
+    font-size: calc(1.5rem);
+    color: var(--red-text-color);
+    border-bottom: 1px dashed var(--red-text-color);
+}
+#menu .item-content p{
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+}
+#menu .item-content span{
+    float: right;
+}
+
+
+#menu .menu-container .menu-item{
     width: 50%;
-    height: 2px;
-    background: var(--red-text-color);
-} */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+#menu .menu-item img{
+    width: calc(5rem + 8vw);
+    height: calc(5rem + 8vw);
+}

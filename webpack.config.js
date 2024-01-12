@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        static: './dist',
+        static: './dist/pages',
     },
     entry: {
         "main": path.resolve(__dirname, './src/script/index.js'),
@@ -14,33 +14,37 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         clean: true,
-        publicPath: './',
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Food App',
             template: path.resolve(__dirname, './src/pages/template.html'),
-            filename: "pages/index.html",
+            filename: "./pages/index.html",
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pages/menu.html'),
-            filename: "pages/menu.html",
+            filename: "./pages/menu.html",
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pages/contact.html'),
-            filename: 'pages/contact.html',
+            filename: './pages/contact.html',
             inject: "body",
-        })
+        }),
     ],
     module: {
         rules: [
             {
+                test: /\.html$/,
+                use: ['html-loader'],
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    'css-loader'
+                    'css-loader',
                 ],
             },
             {
