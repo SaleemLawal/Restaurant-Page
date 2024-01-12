@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'production',
     devServer: {
-        static: './dist/pages',
+        static: './dist',
     },
     entry: {
         "main": path.resolve(__dirname, './src/script/index.js'),
@@ -22,17 +22,17 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Food App',
             template: path.resolve(__dirname, './src/pages/template.html'),
-            filename: "./pages/index.html",
+            filename: "./index.html",
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pages/menu.html'),
-            filename: "./pages/menu.html",
+            filename: "./menu.html",
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/pages/contact.html'),
-            filename: './pages/contact.html',
+            filename: './contact.html',
             inject: "body",
         }),
     ],
