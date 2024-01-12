@@ -22,7 +22,8 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    height: 100%;
+    background-color: var(--cream);
 }
 header{
     min-height: 8%;
@@ -119,7 +120,9 @@ li{
 }
 
 /* Menu Page Styling */
-#menu{
+
+#menu,
+#contact{
     height: max-content;
     background-color: var(--cream);
     display: flex;
@@ -128,7 +131,8 @@ li{
     align-items: center;
     gap: 3rem;
 }
-#menu h1{
+#menu h1,
+#contact h1{
     font-family: var(--sansita);
     font-size: calc(1.5rem + 2vw);
     color: var(--red-text-color);
@@ -138,7 +142,8 @@ li{
     align-items: flex-end;
 }
 
-#menu .menu-container{
+#menu .menu-container,
+#contact .contact-container{
     width: 75%;
     background-color: var(--food-menu-bg);
     border-radius: 10px;
@@ -160,8 +165,6 @@ li{
 #menu .item-content span{
     float: right;
 }
-
-
 #menu .menu-container .menu-item{
     width: 50%;
     display: flex;
@@ -170,8 +173,112 @@ li{
     gap: 1rem;
     padding: 2rem;
 }
-
 #menu .menu-item img{
     width: calc(5rem + 8vw);
     height: calc(5rem + 8vw);
 }
+
+/* Contact Page Styling */
+#contact h1{
+    margin: 0;
+}
+/* #contact{
+    height: 100%;
+} */
+
+.contact-container .content i{
+    color: var(--red-text-color);
+    float: left;
+}
+.contact-container .content p{
+    font-size: 1rem;
+    color: var(--dark-blue);
+    margin-left: 2rem;
+}
+.contact-container .content{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.contact-container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Form Styling */
+form{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+form .input-box{
+    margin-top: 1rem;
+    width: 100%;
+    position: relative;
+}
+form .input-box span{
+    position: absolute;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #666;
+}
+form .input-box input:focus ~ span,
+form .input-box textarea:focus ~ span,
+form .input-box input#name:valid ~ span,
+form .input-box textarea#message:valid ~ span,
+form .input-box input#email:valid ~ span{
+    top: -20px;
+    left: 0;
+    color: var(--red-text-color);
+    font-size: 0.8rem;
+}
+
+form .input-box input,
+form .input-box textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    resize: none;
+}
+form .input-box input:focus,
+form .input-box textarea:focus{
+    outline: none;
+    border-bottom: 2px solid var(--red-text-color);
+}
+form input[type="submit"]{
+    width: 50%;
+    background-color: var(--red-text-color);
+    color: var(--cream);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+form input[type="submit"]:hover{
+    background-color: var(--red-text-color-darker);
+    cursor: pointer;
+}
+.map{
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.map iframe{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
