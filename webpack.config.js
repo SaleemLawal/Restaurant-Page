@@ -15,6 +15,9 @@ module.exports = {
         clean: true,
         publicPath: '/',
     },
+    performance: {
+        hints: false, // Disable performance hints
+      },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Food App',
