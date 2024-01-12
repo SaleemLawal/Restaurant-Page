@@ -13,7 +13,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         clean: true,
-        publicPath: '/',
+        publicPath: './',
     },
     performance: {
         hints: false, // Disable performance hints
